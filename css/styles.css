@@ -8,6 +8,7 @@
     --footer-text-color: #E7E9FC;
     --hero-title-color: #ffffff;
     --footer-logo-color: #f4f4fd;
+    --footer-icon-color: #31D0AA;
 }
 p, h1, h2, h3, h4, h5, h6 {
     margin: 0;
@@ -148,6 +149,17 @@ color: var(--primary-text-color);
 
 .hero {
 background-color: var(--background-color);
+background-image: 
+linear-gradient(
+rgba(46, 47, 66, 0.7),
+rgba(46, 47, 66, 0.7)
+),
+url(../images/hero-bg.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+max-width: 1440px;
+margin: 0 auto;
 text-align: center;
 padding: 188px 0;
 }
@@ -242,7 +254,25 @@ font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: var(--primary-text-color);
+} 
+
+.features-icon-list {
+
+display: flex;
+justify-content: center;
+margin-bottom: 8px;
 }
+
+.features-icon-list {
+width: 264px;
+height: 112px;
+border-radius: 4px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #F4F4FD;
+}
+
 
 /* Main works */
 .title-two {
@@ -298,6 +328,7 @@ line-height: 1.5;
 text-align: center;
 letter-spacing: 0.02em;
 color: var(--primary-text-color);
+margin-bottom: 8px;
 }
 .team-card {
 flex-direction: column;
@@ -315,6 +346,92 @@ Header background, team card background
 .img-team {
     display: block;
 }
+
+.team-soc-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+.team-soc-item {
+    width: 40px;
+    height: 40px;
+}
+.team-soc-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+}
+.team-soc-link:hover {
+    background-color: var(--hover-focus-color);
+}
+
+.team-soc-link:focus {
+background-color: var(--hover-focus-color);
+}
+.hero-customers-list {
+display: flex;
+justify-content: center;
+gap: 24px;
+margin-bottom: 120px;
+}
+.hero-customers-item {
+    width: 168px;
+    height: 88px;
+}
+.customers-link {
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 4px;
+border: 1px solid #8E8F99;
+fill:#8E8F99
+}
+.customers-link:hover {
+border-color: var(--hover-focus-color);
+}
+
+.customers-link:hover .customers-icon {
+fill: var(--hover-focus-color); 
+}
+.customers-link:focus {
+    border-color: var(--hover-focus-color);
+}
+
+.customers-link:focus .customers-icon {
+    fill: var(--hover-focus-color);
+}
+
+.footer-container {
+    display: flex;
+}
+
+.footer-soc-list {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.footer-soc-item {
+    width: 40px;
+    height: 40px;
+}
+
+.footer-soc-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+}
+
 /* Footer */
 
 
@@ -325,6 +442,7 @@ padding-bottom: 100px;
 }
 .footer-all {
     width: 264px;
+    margin-right: 120px;
 }
 
 .footer-logo {
@@ -357,7 +475,22 @@ line-height: 1.5;
 letter-spacing: 0.02em;
 color: var(--footer-text-color);
 }
+.footer-media-title {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--footer-text-color);
+    margin-bottom: 24px;
+}
+.footer-soc-link:hover {
+    background-color: var(--footer-icon-color);
+}
 
+.footer-soc-link:focus {
+    background-color: var(--footer-icon-color);
+}
 /* Main portfolio */
 
 .hero-portfolio-button-list {
@@ -386,11 +519,13 @@ padding: 12px 24px;
 .hero-portfolio-button-item:hover {
     color: var(--botton-active-color);
     background: var(--hover-focus-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .hero-portfolio-button-item:focus {
     color: var(--botton-active-color);
     background: var(--hover-focus-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .hero-portfolio-projects-link:hover {
@@ -447,4 +582,7 @@ background: #FFFFFF;
 border-right: 1px solid #E7E9FC;
 border-bottom: 1px solid #E7E9FC;
 border-left: 1px solid #E7E9FC;
+}
+.project-card:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
